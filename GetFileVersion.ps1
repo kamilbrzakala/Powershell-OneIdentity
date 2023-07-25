@@ -1,5 +1,5 @@
 $parentFolder = "C:\Program Files\Notepad++"
-$outputFile = "$env:USERPROFILE\Documents\FileVersions2.csv"
+$outputFile = "$env:USERPROFILE\Documents\FileVersions.csv"
 
 # ArrayList to store file version objects
 $fileVersions = New-Object System.Collections.ArrayList
