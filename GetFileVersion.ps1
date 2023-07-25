@@ -1,5 +1,5 @@
-$parentFolder = "C:\Program Files\One Identity\One Identity Manager"
-$outputFile = "$env:USERPROFILE\Documents\FileVersions.csv"
+$parentFolder = "C:\Program Files\Notepad++"
+$outputFile = "$env:USERPROFILE\Documents\FileVersions2.csv"
 
 # ArrayList to store file version objects
 $fileVersions = New-Object System.Collections.ArrayList
@@ -15,7 +15,7 @@ function Get-FileVersion {
     if (Test-Path -Path $Path -PathType Leaf) {
         $fileVersion = (Get-Item $Path).VersionInfo.FileVersion
         $fileVersions.Add([PSCustomObject]@{
-            FileName = (Get-Item $Path).Name
+            FileName = Get-Item $Path
             FileVersion = $fileVersion
         }) | Out-Null
 
